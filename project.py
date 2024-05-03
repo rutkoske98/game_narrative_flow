@@ -84,6 +84,7 @@ def choose_room(choices):
     choice = input("Enter the number of your choice: ")
     return choices[int(choice) - 1]
 
+
 # Function to play the game
 def play_game():
     print("Welcome to Anna's Adventure!")
