@@ -90,12 +90,9 @@ def play_game():
     print("Anna is searching for her lost teddy bear.")
     print("Let's help her find it!")
     found = False
-    choices = ["living room", "kitchen"]
-    for i in range(3):
-        if i == 1:
-            choices = ["bedroom", "attic"]
-        elif i == 2:
-            choices = ["mudroom", "basement"]
+    rounds = [(["living room", "kitchen"]), (["bedroom", "attic"]), (["mudroom", "basement"])]
+    random.shuffle(rounds)
+    for choices in rounds:
         room = choose_room(choices)
         print(rooms[room])
         print(imps[room])
